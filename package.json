@@ -1,10 +1,10 @@
 {
-  "name": "@northscaler/error-support",
+  "name": "@ballistaGroup/error-support",
   "version": "3.5.0-pre.1",
   "description": "Convenient base Error class and common subclasses, including message, code, info & cause.",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/northscaler-public/error-support.git"
+    "url": "https://github.com/ballistaGroup/error-support"
   },
   "keywords": [
     "error",
@@ -35,7 +35,8 @@
     "cov": "open coverage/index.html",
     "lint": "standard --verbose 'src/**/*.js'",
     "format": "standard --fix 'src/**/*.js'",
-    "make-distribution": "run-s transpile doc lic",
+    "make-distribution": "run-s transpile doc lic finalize-distribution",
+    "finalize-distribution": "copyfiles --verbose package.json package-lock.json README.md dist",
     "doc": "jsdoc --verbose -d docs -r -c jsdoc.json -R README.md src/main",
     "lic": "node lic.js > LICENSE"
   },
@@ -52,7 +53,7 @@
     "@babel/polyfill": "7.12.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.1",
+    "@babel/cli": "7.18.6",
     "@babel/core": "7.12.3",
     "@babel/plugin-proposal-class-properties": "7.12.1",
     "@babel/plugin-proposal-optional-chaining": "7.12.1",
@@ -65,10 +66,10 @@
     "chai": "4.2.0",
     "copyfiles": "2.4.0",
     "dirty-chai": "2.0.1",
-    "jsdoc": "3.6.6",
+    "jsdoc": "3.6.10",
     "lodash.template": "4.5.0",
-    "mocha": "8.2.1",
-    "npm-cli-login": "0.1.1",
+    "mocha": "10.0.0",
+    "npm-cli-login": "0.0.10",
     "npm-run-all": "4.1.5",
     "nyc": "15.1.0",
     "rimraf": "3.0.2",
