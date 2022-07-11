@@ -1,6 +1,6 @@
 {
   "name": "@ballistaGroup/error-support",
-  "version": "3.5.0-pre.2",
+  "version": "3.5.0-pre.3",
   "description": "Convenient base Error class and common subclasses, including message, code, info & cause.",
   "repository": {
     "type": "git",
